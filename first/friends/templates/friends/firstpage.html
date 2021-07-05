@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+   
+{% block page_title %} Friends Club {% endblock %}
+{% block content %}
+<ul>
+    <a href="{% url 'second' %}">Friends Details</a>
+    <h1> "WELCOME TO FRIENDS CLUB"</h1>
+    {% for user in users %}
+        <li>{{ user.name|title }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

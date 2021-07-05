@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block page_title %}ALL Friends{% endblock  %}
+
+{% block content %}
+    <div>
+        <a href="{% url 'first' %}">back</a>
+        <h1>Friends Details</h1>
+        {% for user in users %}
+            <h3><ul>{{ user.name }}</ul></h3>
+            <div>
+                <li>{{ user.dob }}</li><br>
+                <li>{{ user.position }}</li><br>
+                <li>{{ user.blogs }}</li>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block page_title %}My Friend{% endblock  %}
+
+{% block content %}
+<div>
+    <a href="{% url 'first' %}">back</a>
+    <h1>{{ dost.name }}</h1>
+    <li>{{ dost.dob }}</li>
+    <li>{{ dost.position }}</li>
+    <li>{{ dost.blogs }}</li>
+</div>
+{% endblock %}
